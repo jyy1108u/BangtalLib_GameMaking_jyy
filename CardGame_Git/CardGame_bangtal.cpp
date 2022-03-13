@@ -49,6 +49,7 @@ GameOption Setoption1(GameOption option, int num) {
 
 //사용자 정의 함수 2 - 게임오버 
 void GameOver() {
+	stopTimer(timer2);
 	palse = CreateObject1("images/gameover.png", stage1, 0,0);
 	ExitB = CreateObject1("images/gameover1.png", stage1, 547, 282);
 	ReplayB = CreateObject1("images/gameover2.png", stage1, 506, 331);
@@ -60,6 +61,7 @@ void GameOver() {
 //사용자 정의 함수 3 - 게임 승리
 void GameClear() {
 	if (Su1 && Su2 && Su3 && Su4 && Su5) {
+		stopTimer(timer2);
 		palse2 = CreateObject1("images/GC1.png", stage1, 0, 0);
 		ExitB = CreateObject1("images/gameover1.png", stage1, 547, 282);
 		ReplayB = CreateObject1("images/gameover2.png", stage1, 506, 331);
